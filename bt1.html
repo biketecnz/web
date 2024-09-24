@@ -1,0 +1,331 @@
+<html><head><base href="https://biketec.co.nz/">
+<title>Biketec - Revolutionizing School Bike Fleet Services</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+    :root {
+        --primary-color: #00BFA6;
+        --secondary-color: #FF6B6B;
+        --text-color: #333;
+        --bg-color: #F0F4F8;
+        --accent-color: #4A90E2;
+    }
+    
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        scroll-behavior: smooth;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+    }
+
+    header {
+        background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+        color: white;
+        text-align: center;
+        padding: 3rem 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .logo {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .tagline {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+        font-weight: 300;
+    }
+
+    nav {
+        background-color: rgba(255,255,255,0.1);
+        padding: 1rem 0;
+        backdrop-filter: blur(10px);
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 1rem;
+        font-weight: 600;
+        transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+        color: var(--secondary-color);
+    }
+
+    section {
+        padding: 6rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        color: var(--primary-color);
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+
+    .feature-item {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+
+    .feature-icon {
+        font-size: 3.5rem;
+        color: var(--secondary-color);
+        margin-bottom: 1rem;
+    }
+
+    .cta-button {
+        display: inline-block;
+        background-color: var(--secondary-color);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .cta-button:hover {
+        background-color: #FF8C8C;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+    }
+
+    footer {
+        background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+        color: white;
+        text-align: center;
+        padding: 3rem 0;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(5deg); }
+        100% { transform: translateY(0px) rotate(0deg); }
+    }
+
+    .floating-bikes {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+    }
+
+    .floating-bike {
+        position: absolute;
+        opacity: 0.2;
+        animation: float 8s ease-in-out infinite;
+    }
+
+    #bike1 { top: 10%; left: 10%; animation-delay: 0s; }
+    #bike2 { top: 20%; right: 20%; animation-delay: 2s; }
+    #bike3 { bottom: 15%; left: 30%; animation-delay: 4s; }
+
+    #benefits {
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        padding: 4rem;
+        margin-top: 4rem;
+    }
+
+    #benefits ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    #benefits li {
+        margin-bottom: 1rem;
+        padding-left: 2rem;
+        position: relative;
+    }
+
+    #benefits li::before {
+        content: '✓';
+        color: var(--primary-color);
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-weight: bold;
+    }
+
+    #contact form {
+        display: grid;
+        gap: 1rem;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    #contact input,
+    #contact textarea {
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    #contact textarea {
+        min-height: 150px;
+    }
+
+    @media (max-width: 768px) {
+        .feature-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        section {
+            padding: 4rem 1rem;
+        }
+    }
+</style>
+</head>
+<body>
+    <header>
+        <div class="floating-bikes">
+            <svg class="floating-bike" id="bike1" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30" cy="70" r="25" stroke="white" stroke-width="4"/>
+                <circle cx="70" cy="70" r="25" stroke="white" stroke-width="4"/>
+                <path d="M30 70L50 30L70 70" stroke="white" stroke-width="4"/>
+                <path d="M50 30H80" stroke="white" stroke-width="4"/>
+            </svg>
+            <svg class="floating-bike" id="bike2" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30" cy="70" r="25" stroke="white" stroke-width="4"/>
+                <circle cx="70" cy="70" r="25" stroke="white" stroke-width="4"/>
+                <path d="M30 70L50 30L70 70" stroke="white" stroke-width="4"/>
+                <path d="M50 30H80" stroke="white" stroke-width="4"/>
+            </svg>
+            <svg class="floating-bike" id="bike3" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30" cy="70" r="25" stroke="white" stroke-width="4"/>
+                <circle cx="70" cy="70" r="25" stroke="white" stroke-width="4"/>
+                <path d="M30 70L50 30L70 70" stroke="white" stroke-width="4"/>
+                <path d="M50 30H80" stroke="white" stroke-width="4"/>
+            </svg>
+        </div>
+        <div class="logo">Biketec</div>
+        <div class="tagline">Revolutionizing School Bike Fleet Services</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#benefits">Benefits</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>Empowering Schools Through Cycling</h2>
+        <p>At Biketec, we're not just maintaining bikes; we're fueling a cycling revolution in schools. With over 12 years of hands-on experience, we've mastered the art of keeping school bike fleets in prime condition. Our mission? To ensure that every student has access to a safe, well-maintained bike, unlocking the joys and benefits of cycling for the next generation.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Game-Changing Fleet Service Programme</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <div class="feature-icon">🚲</div>
+                <h3>On-Site Wizardry</h3>
+                <p>We bring our expertise right to your doorstep, eliminating logistical headaches.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🔧</div>
+                <h3>Quarterly Tune-Up Magic</h3>
+                <p>Four comprehensive check-ups annually keep your fleet in top-notch condition.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">💡</div>
+                <h3>Bike Longevity Secrets</h3>
+                <p>Our special techniques dramatically reduce wear and tear, extending bike lifespans.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">💰</div>
+                <h3>Budget-Friendly Excellence</h3>
+                <p>No hidden costs or surprise fees - just straightforward, affordable care.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits">
+        <h2>The Biketec Advantage</h2>
+        <ul>
+            <li>Lightning-fast repairs between scheduled services</li>
+            <li>Hands-on learning for student bike monitors</li>
+            <li>Expert advice on storage and security setups</li>
+            <li>Wealth of knowledge from schools across Wellington</li>
+            <li>Guidance on selecting the perfect bikes and gear</li>
+        </ul>
+        <p>Our revolutionary School Fleet Service Programme is an investment in your students' future, priced at just $78 per bike annually. That's four professional services for less than $20 each!</p>
+        <a href="#contact" class="cta-button">Join the Biketec Revolution!</a>
+    </section>
+
+    <section id="contact">
+        <h2>Let's Get Rolling</h2>
+        <p>Ready to transform your school's cycling experience? Reach out to us and let's start this exciting journey together!</p>
+        <form id="contact-form">
+            <input type="text" placeholder="School Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <textarea placeholder="Tell us about your bike fleet needs" required></textarea>
+            <button type="submit" class="cta-button">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Biketec. Pedaling towards a brighter future.</p>
+        <p>Empowering the tamariki and rangatahi of Wellington Region, one bike at a time.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thanks for reaching out! We'll be in touch faster than a speeding bicycle!');
+            this.reset();
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add a cool parallax effect to the floating bikes
+        window.addEventListener('scroll', function() {
+            const bikes = document.querySelectorAll('.floating-bike');
+            const scrollPosition = window.pageYOffset;
+
+            bikes.forEach((bike, index) => {
+                const speed = 0.5 + (index * 0.1);
+                bike.style.transform = `translateY(${scrollPosition * speed}px) rotate(${scrollPosition * 0.02}deg)`;
+            });
+        });
+    </script>
+</body>
+</html>

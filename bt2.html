@@ -1,0 +1,251 @@
+<html><head><base href="https://biketec.co.nz/">
+<title>Biketec - Empowering Schools with Bike Fleet Services</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    :root {
+        --primary-color: #4CAF50;
+        --secondary-color: #FFA500;
+        --text-color: #333;
+        --bg-color: #f4f4f4;
+    }
+    
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        scroll-behavior: smooth;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+    }
+
+    header {
+        background-color: var(--primary-color);
+        color: white;
+        text-align: center;
+        padding: 2rem 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .logo {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    nav {
+        background-color: rgba(0,0,0,0.1);
+        padding: 1rem 0;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 1rem;
+        font-weight: bold;
+    }
+
+    section {
+        padding: 4rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        color: var(--primary-color);
+        margin-bottom: 2rem;
+    }
+
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+
+    .feature-item {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .feature-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .feature-icon {
+        font-size: 3rem;
+        color: var(--secondary-color);
+        margin-bottom: 1rem;
+    }
+
+    .cta-button {
+        display: inline-block;
+        background-color: var(--secondary-color);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+        background-color: #FF8C00;
+    }
+
+    footer {
+        background-color: var(--primary-color);
+        color: white;
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0px); }
+    }
+
+    .floating-bikes {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+    }
+
+    .floating-bike {
+        position: absolute;
+        opacity: 0.2;
+        animation: float 6s ease-in-out infinite;
+    }
+
+    #bike1 { top: 10%; left: 10%; animation-delay: 0s; }
+    #bike2 { top: 20%; right: 20%; animation-delay: 2s; }
+    #bike3 { bottom: 15%; left: 30%; animation-delay: 4s; }
+
+    @media (max-width: 768px) {
+        .feature-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+</head>
+<body>
+    <header>
+        <div class="floating-bikes">
+            <svg class="floating-bike" id="bike1" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30" cy="70" r="25" stroke="white" stroke-width="4"/>
+                <circle cx="70" cy="70" r="25" stroke="white" stroke-width="4"/>
+                <path d="M30 70L50 30L70 70" stroke="white" stroke-width="4"/>
+                <path d="M50 30H80" stroke="white" stroke-width="4"/>
+            </svg>
+            <svg class="floating-bike" id="bike2" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30" cy="70" r="25" stroke="white" stroke-width="4"/>
+                <circle cx="70" cy="70" r="25" stroke="white" stroke-width="4"/>
+                <path d="M30 70L50 30L70 70" stroke="white" stroke-width="4"/>
+                <path d="M50 30H80" stroke="white" stroke-width="4"/>
+            </svg>
+            <svg class="floating-bike" id="bike3" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30" cy="70" r="25" stroke="white" stroke-width="4"/>
+                <circle cx="70" cy="70" r="25" stroke="white" stroke-width="4"/>
+                <path d="M30 70L50 30L70 70" stroke="white" stroke-width="4"/>
+                <path d="M50 30H80" stroke="white" stroke-width="4"/>
+            </svg>
+        </div>
+        <div class="logo">Biketec</div>
+        <div class="tagline">Empowering Schools with Premium Bike Fleet Services</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#benefits">Benefits</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Biketec</h2>
+        <p>At Biketec, we understand the challenges schools face in maintaining their bike fleets. With over 12 years of experience, we've seen it all and know that kids can be tough on bikes. Our mission is to provide a comprehensive service that addresses exactly what schools need to keep their bike fleets safe, serviceable, and ready for students to enjoy year-round.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our School Bike Fleet Service Programme</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <div class="feature-icon">🚲</div>
+                <h3>On-Site Service</h3>
+                <p>We come to you, eliminating the hassle of transporting bikes across town.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🔧</div>
+                <h3>Regular Maintenance</h3>
+                <p>Four full inspections, services, and tune-ups per year for every bike in your fleet.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">💡</div>
+                <h3>Specialized Care</h3>
+                <p>We apply special measures to reduce common breakages and extend the life of your bikes.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">💰</div>
+                <h3>Cost-Effective</h3>
+                <p>No extra charges for parts, thanks to our regular maintenance approach.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits">
+        <h2>Why Choose Biketec?</h2>
+        <ul>
+            <li>Expert on-demand repairs between scheduled services</li>
+            <li>Educational opportunities for student bike monitors</li>
+            <li>Advice on bike storage and security arrangements</li>
+            <li>Insights from our experience with schools across the Wellington Region</li>
+            <li>Guidance on purchasing new bikes and equipment</li>
+        </ul>
+        <p>Our School Fleet Service Programme costs just $78 per bike per year, covering four comprehensive services. That's an incredible value at only $19.50 per service!</p>
+        <a href="#contact" class="cta-button">Join Our Programme Today!</a>
+    </section>
+
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <p>Ready to keep your school's bike fleet in top condition? Contact us today to learn more about our services or to schedule a consultation.</p>
+        <form id="contact-form">
+            <input type="text" placeholder="School Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <textarea placeholder="Message" required></textarea>
+            <button type="submit" class="cta-button">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Biketec. All rights reserved.</p>
+        <p>Empowering the tamariki and rangatahi of Wellington Region with safe, well-maintained bikes.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message. We will get back to you soon!');
+            this.reset();
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
