@@ -1,17 +1,36 @@
-<html>
-
-<head>
-  <base href="https://www.dirtskool.org" />
+<html><head><base href="https://www.biketec.org.nz" />
   <title>Biketec - Specialists in bikes for schools</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
-  
+  <!-- Then preload images -->
   <link rel="preload" as="image" href="https://biketecnz.github.io/web/Biketec_Website_Cover_Image1.jpg">
 
- 
+  <script>
+    window.addEventListener('load', function() {
+  // Preload video first
+  const video = document.createElement('video');
+  video.preload = 'auto';
+  //video.src = 'https://biketecnz.github.io/dirtskool/DS_WEB_Cover_Video_1.mp4';
+
+  // After video starts loading, preload images
+  video.addEventListener('loadedmetadata', function() {
+    // List of all image URLs used in the page
+    const imageUrls = [
+      'https://biketecnz.github.io/web/Biketec_Website_Cover_Image1.jpg',
+
+    ];
+
+    // Create hidden image elements to preload images
+    imageUrls.forEach(url => {
+      const img = new Image();
+      img.src = url;
+    });
+  });
+});
+  </script>
   <style>
     /* Base styles */
     body {
@@ -322,12 +341,12 @@
     }
 
     /* Contact section */
-    .main-table tr:nth-child(13) {
+    .main-table tr:nth-child(6) {
       height: 600px !important;
       background-color: #312824ff;
     }
 
-    .main-table tr:nth-child(13) td {
+    .main-table tr:nth-child(6) td {
       color: white;
       font-weight: 400;
       text-align: center;
@@ -337,12 +356,12 @@
     }
 
     /* Copyright section */
-    .main-table tr:nth-child(14) {
+    .main-table tr:nth-child(7) {
       height: 30px !important;
       background-color: #29221fff;
     }
 
-    .main-table tr:nth-child(14) td {
+    .main-table tr:nth-child(7) td {
       color: #cccccc;
       font-weight: 300;
       text-align: center;
@@ -430,8 +449,8 @@
           style="width: 900px; height: 100%; margin: 0 auto; background: #29221fff; border-collapse: collapse; border: none;">
           <tr>
             <td
-              style="font-weight: 700; text-align: left; padding: 25px 25px 25px 65px; font-size: 36px; background: #29221fff; border: none;">
-              We know how tough kids can be on bikes<br>So our goal is to keep your school's<br>fleet in top condition<br><br>Join our School Bike Fleet Service Programme today!
+              style="font-weight: 700; text-align: center; padding: 25px 25px 25px 65px; font-size: 36px; background: #29221fff; border: none;">
+              We know how tough kids can be on bikes. So our goal is to keep your school's fleet in top condition<br><br>Join our School Bike Fleet Service Programme today!
             </td>
           </tr>
         </table>
@@ -486,136 +505,7 @@
         </table>
       </td>
     </tr>
-        <tr>
-      <td colspan="2">
-        <table
-          style="width: 900px; height: 100%; margin: 0 auto; background: #312824ff; border-collapse: collapse; border: none;">
-          <tr>
-            <td
-              style="font-weight: 700; text-align: right; padding: 25px; font-size: 22px; background: #312824ff; border: none;">
-              While students are raving about the fun they're having as​<br>
-              they attain new skills and confidence, teachers and parents​<br>
-              are remarking about the positive changes in attitude and​<br>
-              engagement they are seeing in their teenagers.
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <td colspan="2">
-      <div class="testimonial-overlay">
-        "I enjoyed trying something new! and doing​<br>
-          something that was fun while it being beneficial for​<br>
-          my health/fitness. I liked how it was something that​<br>
-          wasn't school-related like it was a space for us​<br>
-          to take our minds off school. Although it was scary​<br>
-          sometimes, the adrenaline you get makes it​<br>
-          worthwhile. We were allowed to scream as much​<br>
-          we wanted and it made it more fun."
-      </div>
-      <img src="https://biketecnz.github.io/dirtskool/DS_WEB_Cover_Image_2.jpg" alt="Cover Image 2">
-    </td>
-    </tr>
-    <tr>
-      <td class="split-left">
-        <img src="https://biketecnz.github.io/dirtskool/DS_WEB_Cover_Image_3.jpg" alt="Cover Image 3">
-      </td>
-      <td class="split-right">Developing a passion for cycling at a young age​<br>
-      has been shown to have positive health benefits​<br>
-      throughout a person’s
-      life, and we are seeing​<br>
-      previously inactive youth purchase their own​<br>
-      equipment to continue riding outside of class.​<br>
-      Proper riding instruction also improves rider safety​<br>
-      and reduces accidents across all riding environments.​<br>
-      ​<br>​
-      For many participants this course is also often their​<br>
-      first experience spending time in our beautiful​<br>
-      natural bush, and they develop personal​<br>
-      confidence, personal responsibility, and risk​<br>
-      management skills while exploring our environment.</td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <img src="https://biketecnz.github.io/dirtskool/DS_WEB_Cover_Image_4.jpg" alt="Cover Image 4">
-      </td>
-    </tr>
-    <tr>
-      <td class="split-left">
-        <table class="nested-cell">
-          <tr>
-            <td>
-              We endeavour to deliver the Dirtskool programme<br>
-              at no cost to high schools or their students to make<br>
-              this active recreation accessible for rangatahi that<br>
-              may otherwise not get the opportunity to engage in<br>
-              this type of activity, and is inspiring many who are<br>
-              less active, and a larger proportion of girls, to get<br>
-              involved.
-              <br>​<br>
-              We have been able to do this for the past two years<br>
-              through a partnership with <a href="https://www.biketec.org.nz" target="_blank"
-                style="color: #ffffff; text-decoration: underline;">Biketec</a>, a local bike fleet<br>
-              maintenance service provider, and the assistance<br>
-              of <a href="https://www.nukuora.org.nz/funding/tu-manawa-active-aotearoa/" target="_blank"
-                style="color: #ffffff; text-decoration: underline;">Tū Manawa Active Aotearoa</a> funding.
-              <br>​<br>
-              We currently have the capacity to deliver the<br>
-              programme to 8 schools, with many more wanting<br>
-              to join in. We are looking for new funding streams<br>
-              that will allow us to offer this opportunity through<br>
-              more schools and reach more rangatahi. Our goal<br>
-              is to try to offer a gateway to this activity in all<br>
-              colleges in the region. Please get in touch if you are<br>
-              aware of opportunities that could assist.
-            </td>
-          </tr>
-        </table>
-      </td>
-      <td class="split-right">
-        <img src="https://biketecnz.github.io/dirtskool/DS_WEB_Cover_Image_5.jpg" alt="Cover Image 5">
-      </td>
-    </tr>
-    
-    
-    <tr>
-      <td colspan="2" style="text-align: center; padding: 40px;">
-        <img src="https://biketecnz.github.io/dirtskool/dirtskool-logo-v2-final-PNG.png" alt="Dirtskool Logo" style="position: relative; width: auto; max-width: 1000px; height: auto; margin: 0 auto;">
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <table
-          style="width: 900px; height: 100%; margin: 0 auto; background: #203715ff;; border-collapse: collapse; border: none;">
-          <tr>
-            <td
-              style="font-weight: 400; text-align: left; padding: 25px; font-size: 20px; background: #203715ff;; border: none;">
-              Our goal is to engage young people in the healthy, rewarding, physical,<br>
-              recreation activity of mountain biking. Delivering not just trail riding skills, but<br>
-              introducing them to self confidence and personal responsibility in the outdoors.<br>
-              ​<br>
-              Teachers, if you want to include this fun activity into your phys-ed/outdoor-ed<br>
-              classes bring them out to the Wainuiomata Mountain Bike Trail Park with Dirtskool,<br>
-              for a couple of introductory sessions or as a regular activity term long to<br>
-              develop ongoing skills and confidence, we make it work for your classes.​<br>
-              ​<br>​<br>
-              <h2 style="font-size: 38px; margin-top: 20px;">Teachers,​<br>book your class into Dirtskool​<br>right here, right now!
-              </h2>
-              <button type="submit" style="width: 200px; 
-                background: #312824ff;  
-                color: #ffffff;  
-                border: 1px solid #ffffff; 
-                padding: 12px 20px; 
-                border-radius: 0px; 
-                cursor: pointer; 
-                font-size: 16px; 
-                font-weight: 700;
-                transition: all 0.3s ease;">Book now!</button>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
+
     <tr>
       <td colspan="2">
         <table
@@ -748,7 +638,12 @@
     </tr>
 
     <tr>
-      <td colspan="2">© 2025 Biketec NZ</td>
+      <td colspan="2">
+              &copy; 2025 Biketec NZ.
+            </td>
+          </tr>
+        </table>
+      </td>
     </tr>
   </table>
 </body>
