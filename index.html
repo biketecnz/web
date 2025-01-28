@@ -8,29 +8,17 @@
   <!-- Then preload images -->
   <link rel="preload" as="image" href="https://biketecnz.github.io/web/Biketec_Website_Cover_Image1.jpg">
 
-  <script>
-    window.addEventListener('load', function() {
-  // Preload video first
-  const video = document.createElement('video');
-  video.preload = 'auto';
-  //video.src = 'https://biketecnz.github.io/dirtskool/DS_WEB_Cover_Video_1.mp4';
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CSDLPHRL5S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  // After video starts loading, preload images
-  video.addEventListener('loadedmetadata', function() {
-    // List of all image URLs used in the page
-    const imageUrls = [
-      'https://biketecnz.github.io/web/Biketec_Website_Cover_Image1.jpg',
+  gtag('config', 'G-CSDLPHRL5S');
+</script>
 
-    ];
-
-    // Create hidden image elements to preload images
-    imageUrls.forEach(url => {
-      const img = new Image();
-      img.src = url;
-    });
-  });
-});
-  </script>
+  
   <style>
     /* Base styles */
     body {
