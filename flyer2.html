@@ -55,4 +55,207 @@
     border-radius: 0px;
     padding: 0px 20px !important;
   }
-  .header-nested
+  .header-nested td {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px !important;
+  }
+  .header-nested div {
+    flex: 1;
+    padding: 0 10px;
+  }
+  .header-nested a {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  /* ========== Row 2: Intro band ========== */
+  .main-table tr:nth-child(2) {
+    height: 150px !important;
+    background-color: #29221fff;
+  }
+
+  /* ========== Row 3: Image | Text ========== */
+  .main-table tr:nth-child(3) {
+    height: 150px !important;
+    background-color: #312824ff;
+  }
+  .main-table tr:nth-child(3) td {
+    color: #ffffff;
+    font-weight: 200;
+    text-align: left;
+    padding: 200px 40px 200px 80px;
+    font-size: 18px;
+  }
+
+  /* ========== Row 4: Text | Image (Subscription) ========== */
+  .main-table tr:nth-child(4) {
+    height: auto !important;
+    min-height: 150px;
+    background-color: #203715ff;
+  }
+  .main-table tr:nth-child(4) td {
+    padding: 100px 40px 120px 80px;
+    vertical-align: top;
+  }
+
+  /* ========== Row 5: Mid band text ========== */
+  .main-table tr:nth-child(5) {
+    height: 150px !important;
+    background-color: #203715ff;
+  }
+  .main-table tr:nth-child(5) td {
+    color: white;
+    font-weight: 200;
+    text-align: center;
+    padding: 100px 40px 100px 40px;
+    font-size: 26px;
+  }
+
+  /* ========== Row 6: Footer/contact band ========== */
+  .main-table tr:nth-child(6) {
+    height: 600px !important;
+    background-color: #312824ff;
+  }
+  .main-table tr:nth-child(6) td {
+    color: white;
+    font-weight: 400;
+    text-align: center;
+    padding: 30px 80px 80px 0px;
+    font-size: 10px;
+  }
+
+  /* ========== Split columns ========== */
+  .split-left, .split-right {
+    width: 50%;
+    box-sizing: border-box;
+  }
+
+  /* ========== Image fill behavior ========== */
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* ========== Mobile ========== */
+  @media screen and (max-width: 768px) {
+    .main-table,
+    .main-table tbody,
+    .main-table tr,
+    .main-table td {
+      display: block;
+      width: 100% !important;
+      height: auto;
+    }
+    .main-table td { margin: 0; }
+  }
+</style>
+</head>
+
+<body>
+  <table class="main-table">
+    <tr>
+      <td colspan="2">
+        <table style="width: 100%; border-collapse: collapse; border: none;">
+          <tr>
+            <td class="header-nested" style="display: flex; justify-content: space-between; align-items: center;">
+              <div style="flex: 1; text-align: center;"><h1>Biketec - Specialists in bikes for schools</h1></div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+     <tr>
+      <td colspan="2">
+        <table
+          style="width: 1200px; height: 100%; margin: 0 auto; background: #29221fff; border-collapse: collapse; border: none;">
+          <tr>
+            <td
+              style="font-weight: 300; text-align: center; padding: 25px 25px 25px 65px; font-size: 28px; background: #29221fff; border: none;">
+              We know how tough kids can be on bikes. So our goal is to keep your school's fleet in top condition<br>Join our School Bike Fleet Service Programme today!
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td class="split-left">
+        <img src="https://biketecnz.github.io/web/Biketec_Website_Cover_Image1.jpg"  alt="Cover Image 1">
+      </td>
+      <td class="split-right">Our mission is to provide a service that addresses exactly what a school needs to keep their full bike fleet ready and
+      safe for their students to benefit from while limiting costs.<br><br>
+      We see the results of how bikes are treated in schools every day. Over the past fourteen years we’ve seen it all, kids
+      are tough on bikes. To keep your investment in equipment for your students in a safe, serviceable condition they need
+      regular care. Bikes in a school environment that are not regularly maintained have a short lifespan, but with some care
+      they can last well over ten years.<br><br>
+      You could take the time to pile your bikes on a trailer and haul them down to a bike store and pay $80-$150 for each bike to get checked over and tightened up, plus more for replacement parts, and that will keep them going for a while, or you could join our School Bike Fleet Service Programme and know that your bikes will be ready to use year round.
+      </td>
+    </tr><tr>
+      <td class="split-left">
+        <div class="Subscription">
+          <h3>An annual subscription to the Biketec School Bike Fleet Service Programme includes</h3>
+
+          <ul>
+            <li>We come to you, so you don’t have to figure out how to get your bikes to a store on the other side of town,</li>
+            <li>We fully inspect, service, and tune every bike in your fleet four times per year,</li>
+            <li>We apply our own special measures that reduce common breakages,</li>
+            <li>We don’t charge extra for parts because we’re checking your bikes on a regular basis reducing wear and tear,</li>
+            <li>We drop by without charge to repair any out of action bikes between services,</li>
+            <li>We integrate activities during scheduled services for your bike monitors to get involved, teaching them to look after the bikes, recognise faults, and assist with maintenance,</li>
+            <li>We check your bike storage and security arrangements, and advise on improvements or maintenance required,</li>
+            <li>We share ideas we have gathered from our experience with schools across the region…</li>
+          </ul><br>
+          <p> <h3>Subscription to the Biketec School Fleet Service Programme costs</h3>
+            <B>Fleet of child sized bikes - $78 per bike per year.</B><br> 
+            That’s just $19.50 each for four services. Minimum 20 bike fleet,<br> additional scooters and balance bikes included for free.<br><br>
+          <B>Fleet of adult sized bikes - $112 per bike per year.</B><br>
+            That’s just $28 each for four services. Minimum 20 bike fleet.<br><br> 
+            Prices exclude GST</p>
+        </div>
+      </td>
+      <td class="split-right">
+        <img src="https://biketecnz.github.io/web/Biketec_Website_Cover_Image2.jpg" alt="Cover Image 2">
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <table
+          style="width: 900px; height: 100%; margin: 0 auto; background: #29221fff; border-collapse: collapse; border: none;">
+          <tr>
+            <td
+              style="font-weight: 300; text-align: left; padding: 25px 25px 25px 65px; font-size: 20px; background: #29221fff; border: none;">
+              We also give advice on purchasing new bikes and equipment that are most appropriate for your environment and needs, and
+              can supply a range of top quality brands. All bikes we sell come with a one year subscription to this service included.
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+ <tr>
+      <td colspan="2">
+        <table style="width: 100%; border-collapse: collapse; border: none;">
+          <tr>
+            <td class="header-nested" style="display: flex; justify-content: space-between; align-items: center;">
+              <div style="flex: 1; text-align: center;"><h1>~ ~ www.biketec.org.nz ~ ~ Simon Gilbert ~ ~ 021 746642 ~ ~ simon@biketec.org.nz ~ ~</h1></div>
+
+              </div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    
+</body>
+</html>
