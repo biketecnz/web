@@ -6,398 +6,161 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
 
-  
 <style>
-    /* Base styles */
-    body {
-  margin: 0;
-  padding: 0;
-  background-color: #000;
-  color: #fff;
-  font-family: 'Poppins', sans-serif;
-}
+  /* ========== Base ========== */
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+  }
 
-    /* Main table structure */
-    .main-table {
-      width: 100%;
-      max-width: 1900px;
-      height: 100vh;
-      border-collapse: collapse;
-      table-layout: fixed;
-      margin: 0;
-      padding: 0;
-    }
+  /* ========== Table scaffold ========== */
+  .main-table {
+    width: 100%;
+    max-width: 1900px;
+    height: 100vh;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin: 0;
+    padding: 0;
+  }
+  .main-table td {
+    border: 1px solid #333;
+    vertical-align: top;
+    position: relative;
+    overflow: hidden;
+  }
 
-    /* Common cell styles */
-    .main-table td {
-      border: 1px solid #333;
-      vertical-align: top;
-      position: relative;
-      overflow: hidden;
-    }
+  /* ========== Row 1: Header ========== */
+  .main-table tr:nth-child(1) {
+    height: 80px !important;
+    background-color: #29221fff;
+  }
+  .main-table tr:nth-child(1) td {
+    color: white;
+    font-weight: 800;
+    text-align: center;
+    padding: 80px 30px 20px 20px;
+    font-size: 18px;
+  }
 
-    /* Header row */
-    .main-table tr:nth-child(1) {
-      height: 40px !important;
-      background-color: #29221fff
-    }
+  /* Header nested container */
+  .header-nested {
+    background-color: #29221fff;
+    width: 100%;
+    margin: 0 auto;
+    border: 0px solid #404040 !important;
+    border-radius: 0px;
+    padding: 0px 20px !important;
+  }
+  .header-nested td {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px !important;
+  }
+  .header-nested div {
+    flex: 1;
+    padding: 0 10px;
+  }
+  .header-nested a {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+  }
 
-    .main-table tr:nth-child(1) td {
-      color: white;
-      font-weight: 800;
-      text-align: center;
-      padding: 20px 30px 0px 20px;
-      font-size: 18px;
-    }
+  /* ========== Row 2: Intro band ========== */
+  .main-table tr:nth-child(2) {
+    height: 150px !important;
+    background-color: #29221fff;
+  }
 
-    /* Updated header-nested style */
-    .header-nested {
-      background-color: #29221fff;
-      width: 100%;
-      /* Changed from 980% to 100% */
-      margin: 0 auto;
-      border: 0px solid #404040 !important;
-      border-radius: 0px;
-      padding: 0px 20px !important;
-      /* Added horizontal padding */
-    }
-
-    /* Ensure the td containing the header has proper display and width */
-    .header-nested td {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      /* This ensures vertical centering */
-      padding: 10px 20px !important;
-    }
-
-    /* Add styles for the header links/text */
-    .header-nested div {
-      flex: 1;
-      padding: 0 10px;
-    }
-
-    /* Add styles for the header righthand link link (removed)*/
-    .header-nested a {
-      color: #ffffff;
-      text-decoration: none;
-      /* Removes underline */
-      display: inline-block;
-      vertical-align: middle;
-    }
-  
-
-    /* Title - We know... */
-    .main-table tr:nth-child(2) {
-      height: 150px !important;
-      background-color: #29221fff
-
-    }
-    .main-table tr:nth-child(9) td {
-      color: white;
-      font-size: 28px;
-      font-weight: 600;
-      text-align: center;
-      padding: 80px 40px 90px 40px;
-      line-height: 1.1;
-    }
-    /* Split - image | Our goal */
-    .main-table tr:nth-child(3) {
+  /* ========== Row 3: Image | Text (Mission) ========== */
+  .main-table tr:nth-child(3) {
     height: 150px !important;
     background-color: #312824ff;
-    }
-
-    .main-table tr:nth-child(3) td {
+  }
+  .main-table tr:nth-child(3) td {
     color: #ffffff;
     font-weight: 200;
     text-align: left;
     padding: 200px 40px 200px 80px;
-    font-size: 18px;
-    }
-    /* split - Service programme | image */
-    .main-table tr:nth-child(4) {
+    font-size: 20px;
+  }
+
+  /* ========== Row 4: Text | Image (Subscription) ========== */
+  .main-table tr:nth-child(4) {
     height: auto !important;
     min-height: 150px;
     background-color: #203715ff;
-    }
-
-    .main-table tr:nth-child(4) td {
+  }
+  .main-table tr:nth-child(4) td {
     padding: 100px 40px 120px 80px;
     vertical-align: top;
-    }
+  }
 
-    .curriculum-content {
-    padding: 40px;
-    text-align: left;
-    }
-
-    .curriculum-content h2 {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 30px;
-    color: #ffffff;
-    }
-
-    .curriculum-content h3 {
-    font-size: 20px;
-    font-weight: 600;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    color: #ffffff;
-    }
-
-    .curriculum-content ul {
-    list-style-type: disc;
-    margin-left: 25px;
-    margin-bottom: 20px;
-    }
-
-    .curriculum-content li {
-    margin-bottom: 10px;
-    line-height: 1.5;
-    color: #ffffff;
-    font-size: 18px;
+  /* ========== Row 5: Text box (Advice) ========== */
+  .main-table tr:nth-child(5) {
+    height: 150px !important;
+    background-color: #29221fff;
+  }
+  .main-table tr:nth-child(5) td {
+    color: white;
     font-weight: 200;
-    }
+    text-align: center;
+    padding: 60px 40px 60px 40px;
+    font-size: 26px;
+  }
 
-    .curriculum-content p {
-    line-height: 1.6;
-    margin-top: 20px;
-    color: #ffffff;
-    font-size: 18px;
+  /* ========== Row 6: Footer/contact band ========== */
+  .main-table tr:nth-child(6) {
+    /*height: 100%; */
+    /*background-color: */;
+  }
+  .main-table tr:nth-child(6) td {
+    color: white;
     font-weight: 200;
-    }
-    .main-table tr:nth-child(5) td {
-      color: white;
-      font-weight: 200;
-      text-align: center;
-      padding: 100px 40px 100px 40px;
-      font-size: 26px;
-    }
+    text-align: center;
+    padding: 20px 80px 20px 80px;
+    font-size: 12px;
+  }
 
-    /* Testimonial overlay styling */
-    .testimonial-overlay {
-      position: absolute;
-      top: 50%;
-      left: 25%;
-      transform: translate(-50%, -50%);
-      z-index: 2;
-      text-align: centre;
-      padding: 40px;
-      color: white;
-      font-size: 24px;
-      font-weight: 400;
-      max-width: 80%;
-      line-height: 1.4;
-      background: rgba(0, 0, 0, 0);
-      border-radius: 10px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
+  /* ========== Split columns ========== */
+  .split-left, .split-right {
+    width: 50%;
+    box-sizing: border-box;
+  }
 
-    @media screen and (max-width: 1800px) {
-      .testimonial-overlay {}
-    }
+  /* ========== Image fill behavior ========== */
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
 
-    /* Split - image | Developing a passion */
-    .main-table tr:nth-child(5) {
-      height: 150px !important;
-      background-color: #203715ff;
-    }
-
-    .main-table tr:nth-child(6) td {
-      color: #ffffff;
-      font-weight: 200;
-      text-align: left;
-      padding: 200px 40px 200px 80px;
-      font-size: 18px;
-    }
-
-    /* image */
-    .main-table tr:nth-child(6) {
-      height: 550px !important;
-      background-color: #595959;
-    }
-
-    /* Updated image style for row 9 */
-    .main-table tr:nth-child(7) img {
-      object-position:
-        /* center calc(-400px + 000px); Shifts image up 100px to crop top */
-        height:
-        /* calc(100% + 200px);Increase height to accommodate crops on both ends */
-    }
-
-    /* Split - We endeavour to | image */
-    .main-table tr:nth-child(8) {
-      height: 150px !important;
-      background-color: #27211eff;
-    }
-
-    .main-table tr:nth-child(8) td {
-      color: #f0f0f0;
-      font-weight: 200;
-      text-align: left;
-      padding: 100px 40px 120px 80px;
-      font-size: 18px;
-    }
-
-    .nested-cell td {
-      font-weight: 600;
-      text-align: left;
-      padding: 25px;
-      font-size: 20px;
-      background: #27211eff;
-      border: none;
-    }
-
-    
-
-    
-
-    /* logo */
-    .main-table tr:nth-child(11) {
-      height: auto !important;
-      background-color: #312824ff;
-    }
-
-    .main-table tr:nth-child(11) img {
-      position: relative;
-      width: auto;
-      max-width: 400px;
-      height: auto;
-      margin: 0 auto;
-    }
-
-    .main-table tr:nth-child(11) td {
-      text-align: center;
-      padding: 60px 00px 70px 30px;
-    }
-
-    /* Our Goal*/
-    .main-table tr:nth-child(12) {
-      height: 150px !important;
-      background-color: #203715ff;
-    }
-
-    .main-table tr:nth-child(12) td {
-      color: white;
-      font-weight: 400;
-      text-align: left;
-      padding: 25px 0px 50px 0px;
-      font-size: 20px;
-    }
-
-    /* Button styles */
-    .booking-button {
-      display: inline-block;
-      padding: 15px 30px;
-      margin-top: 30px;
-      border: 1px solid #ffffff;
-      background-color: transparent;
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 20px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      border-radius: 0px;
-    }
-
-    .booking-button:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-      transform: translateY(-2px);
-    }
-
-    .booking-button:active {
-      transform: translateY(0px);
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-
-    /* Contact section */
-    .main-table tr:nth-child(6) {
-      height: 600px !important;
-      background-color: #312824ff;
-    }
-
-    .main-table tr:nth-child(6) td {
-      color: white;
-      font-weight: 400;
-      text-align: center;
-      padding: 30px 80px 80px 0px;
-      font-size: 10px;
-
-    }
-
-    /* Copyright section */
-    .main-table tr:nth-child(7) {
-      height: 30px !important;
-      background-color: #29221fff;
-    }
-
-    .main-table tr:nth-child(7) td {
-      color: #cccccc;
-      font-weight: 300;
-      text-align: center;
-      padding: 20px;
-      font-size: 10px;
-    }
-
-    /* Split column layouts */
-    .split-left,
-    .split-right {
-      width: 50%;
-      box-sizing: border-box;
-    }
-
-    /* Media content styles */
-    img,
-    video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+  /* ========== Mobile ========== */
+  @media screen and (max-width: 768px) {
+    .main-table,
+    .main-table tbody,
+    .main-table tr,
+    .main-table td {
       display: block;
-      margin: 0;
-      padding: 0;
+      width: 100% !important;
+      height: auto;
     }
-
-    /* Mobile responsiveness */
-    @media screen and (max-width: 768px) {
-
-      .main-table,
-      .main-table tbody,
-      .main-table tr,
-      .main-table td {
-        display: block;
-        width: 100% !important;
-        height: auto;
-      }
-
-      .main-table td {
-        margin: 0;
-      }
-
-      .video-overlay {
-        font-size: 24px;
-      }
-    }
-
-    /* Nested cell styles */
-    .nested-cell {
-      width: 900px;
-      height: 100%;
-      margin: 0 auto;
-      background: red;
-      border-collapse: collapse;
-      border: none;
-    }
-
-    /* Update the image object-position property in the contact section */
-    .main-table tr:nth-child(15) td:nth-child(2) img {
-      object-position: top;
-    }
-  </style>
+    .main-table td { margin: 0; }
+  }
+</style>
 </head>
 
 <body>
@@ -472,28 +235,152 @@
           style="width: 900px; height: 100%; margin: 0 auto; background: #29221fff; border-collapse: collapse; border: none;">
           <tr>
             <td
-              style="font-weight: 300; text-align: left; padding: 25px 25px 25px 65px; font-size: 20px; background: #29221fff; border: none;">
-              We also give advice on purchasing new bikes and equipment that are most appropriate for your environment and needs, and
+              style="font-weight: 300; text-align: left; padding: 25px 25px 25px 65px; font-size: 20px; background: #203715ff; border: none;">
+              We also provide advice on purchasing new bikes and equipment that are most appropriate for your environment and needs, and
               can supply a range of top quality brands. All bikes we sell come with a one year subscription to this service included.
             </td>
           </tr>
         </table>
       </td>
     </tr>
- <tr>
+  <tr>
       <td colspan="2">
-        <table style="width: 100%; border-collapse: collapse; border: none;">
+        <table
+          style="width: 1200px; height: 100%; margin: 80px auto; background: #312824ff; border-collapse: collapse; border: none;">
           <tr>
-            <td class="header-nested" style="display: flex; justify-content: space-between; align-items: center;">
-              <div style="flex: 1; text-align: center;"><h1>~ ~ www.biketec.org.nz ~ ~ Simon Gilbert ~ ~ 021 746642 ~ ~ simon@biketec.org.nz ~ ~</h1></div>
+            <td
+              style="width: 50%; font-weight: 400; text-align: center; padding: 25px; font-size: 12px; background: white; border: none;">
+              <h2 style="color: #203715ff; font-size: 32px; margin-bottom: 15px;">Want to know more?<br>Get in Touch
+              </h2>
+              <p style="color: #203715ff; font-size: 24px; margin-bottom: 30px;">021 746642</p>
 
-              </div>
+              <!-- Add EmailJS scripts -->
+              <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+              </script>
+              <script type="text/javascript">
+                (function() {
+                  emailjs.init({
+                    publicKey: "eS1lECw2cL7yaaYvC",
+                  });
+                })();
+              </script>
+              <script type="text/javascript">
+                window.onload = function() {
+                  document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    
+                    // First validate email
+                    const email = document.getElementById('user_email').value;
+                    if (!email.includes('@')) {
+                      alert('Please enter a valid email address with @ symbol');
+                      return false;
+                    }
+
+                    // Show loading state
+                    const submitButton = this.querySelector('button[type="submit"]');
+                    const originalButtonText = submitButton.innerHTML;
+                    submitButton.innerHTML = 'Sending...';
+                    submitButton.disabled = true;
+
+                    // Send email using EmailJS
+                    emailjs.sendForm('service_ykda5qg', 'template_4cimntf', this)
+                      .then(() => {
+                        // Success
+                        alert('Thank you for your message, we\'ll be in touch soon');
+                        this.reset(); // Clear the form
+                      })
+                      .catch((error) => {
+                        // Error
+                        console.error('EmailJS Error:', error);
+                        alert('Failed to send message. Please try again.');
+                      })
+                      .finally(() => {
+                        // Reset button state
+                        submitButton.innerHTML = originalButtonText;
+                        submitButton.disabled = false;
+                      });
+                  });
+                }
+              </script>
+
+              <form id="contact-form" style="max-width: 400px; margin: 0 auto;">
+                <input type="hidden" name="contact_number" value="697483">
+
+                <div style="margin-bottom: 20px;">
+                  <input type="text"
+                         id="user_name"
+                         name="user_name"
+                         placeholder="Your name"
+                         required
+                         style="width: 100%; 
+                                padding: 8px; 
+                                border: none;
+                                border-bottom: 1px solid #d0ac68ff; 
+                                background: rgba(255,255,255,0.9);
+                                font-family: inherit;
+                                font-size: inherit;">
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                  <input type="text"
+                         id="user_email"
+                         name="user_email"
+                         placeholder="Your email address"
+                         pattern="[^@\s]+@[^@\s]+"
+                         title="Must be an email address"
+                         required
+                         style="width: 100%; 
+                                padding: 8px; 
+                                border: none;
+                                border-bottom: 1px solid #d0ac68ff; 
+                                background: rgba(255,255,255,0.9);
+                                font-family: inherit;
+                                font-size: inherit;">
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                  <label for="message" style="display: block; color: #777675ff; margin-bottom: 5px; font-size: 13px; text-align: left; padding: 0px 0px 0px 11px; font-family: Arial;">Your message</label>
+                  <textarea id="message"
+                            name="message"
+                            required
+                            style="width: 100%; 
+                                   height: 120px; 
+                                   padding: 8px; 
+                                   border: none;
+                                   border-bottom: 1px solid #d0ac68ff; 
+                                   background: rgba(255,255,255,0.9);
+                                   font-family: inherit;
+                                   font-size: inherit;"></textarea>
+                </div>
+
+                <button type="submit" style="width: 100%; 
+                            background: #312824ff;  
+                            color: white; 
+                            border: 1px solid #312824ff; 
+                            padding: 12px; 
+                            border-radius: 0px; 
+                            cursor: pointer; 
+                            font-size: 16px; 
+                            font-weight: 600;
+                            transition: all 0.3s ease;">Send Message</button>
+              </form>
+            </td>
+            <td
+              style="width: 50%; font-weight: 400; text-align: left; padding: 0; font-size: 20px; background: white; border: none; position: relative;">
+              <img src="https://biketecnz.github.io/dirtskool/DS_WEB_Cover_Image_Simon.jpg" alt="Simon" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
             </td>
           </tr>
         </table>
       </td>
     </tr>
-    
-</body>
 
-</html>
+    <tr>
+      <td colspan="2">
+              &copy; 2025 Biketec NZ.
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
