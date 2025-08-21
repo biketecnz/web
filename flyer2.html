@@ -2,78 +2,97 @@
 <html lang="en">
 <head>
   <base href="https://www.biketec.org.nz" />
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Biketec - Specialists in bikes for schools</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
+    /* Base */
+    :root {
+      --bg-dark: #29221fff;   /* original 8-digit hex with alpha */
+      --bg-brown: #312824ff;
+      --bg-green: #203715ff;
+    }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      padding: 0;
-      background-color: #000;
+      background: #000;
       color: #fff;
-      font-family: 'Poppins', sans-serif;
+      font-family: "Poppins", sans-serif;
     }
 
+    /* Table scaffold (kept on purpose to preserve original layout) */
     .main-table {
       width: 100%;
       max-width: 1900px;
       border-collapse: collapse;
-      margin: 0;
-      padding: 0;
+      table-layout: fixed;
+      margin: 0 auto;
     }
-
     .main-table td {
       vertical-align: top;
       position: relative;
-      overflow: hidden;
+      border: 1px solid #333; /* matches the original subtle grid */
     }
 
-    /* Header */
+    /* Header band */
+    .row-header { background: var(--bg-dark); }
     .header-nested {
-      background-color: #29221f;
       width: 100%;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      text-align: center;
+      background: var(--bg-dark);
+      border-collapse: collapse;
+      border: none;
     }
-
-    .header-nested h1 {
+    .header-title {
       color: #fff;
       font-weight: 800;
+      text-align: center;
+      padding: 20px 30px 0 20px;
       font-size: 18px;
       margin: 0;
     }
 
-    /* Intro section */
-    .intro {
+    /* Intro band */
+    .row-intro { background: var(--bg-dark); }
+    .intro-box {
       width: 1200px;
       margin: 0 auto;
-      background: #29221f;
+      background: var(--bg-dark);
+      border-collapse: collapse;
+      border: none;
+    }
+    .intro-text {
       font-weight: 300;
       text-align: center;
       padding: 25px 65px;
       font-size: 28px;
     }
 
-    /* Split layout */
-    .split-left,
-    .split-right {
+    /* Split rows */
+    .row-mission { background: var(--bg-brown); }
+    .row-subscription { background: var(--bg-green); }
+
+    .split-left, .split-right {
       width: 50%;
-      box-sizing: border-box;
-      vertical-align: top;
-      padding: 40px 80px;
+    }
+    .pad-wide {
+      color: #fff;
+      font-weight: 200;
+      text-align: left;
+      padding: 200px 40px 200px 80px; /* matches original generous spacing */
+      font-size: 18px;
     }
 
-    .split-left img,
-    .split-right img {
+    /* Images should take the cell width and keep aspect ratio */
+    td.image-cell { padding: 0; }
+    td.image-cell img {
+      display: block;
       width: 100%;
       height: auto;
-      display: block;
     }
 
     /* Subscription content */
@@ -83,13 +102,11 @@
       margin: 30px 0 15px;
       color: #fff;
     }
-
     .subscription ul {
-      list-style-type: disc;
-      margin-left: 25px;
-      margin-bottom: 20px;
+      list-style: disc;
+      margin: 0 0 20px 25px;
+      padding: 0;
     }
-
     .subscription li {
       margin-bottom: 10px;
       line-height: 1.5;
@@ -97,7 +114,6 @@
       font-size: 18px;
       font-weight: 200;
     }
-
     .subscription p {
       line-height: 1.6;
       margin-top: 20px;
@@ -106,61 +122,44 @@
       font-weight: 200;
     }
 
-    /* Advice section */
-    .advice {
+    /* Advice band */
+    .row-advice { background: var(--bg-dark); }
+    .advice-box {
       width: 900px;
       margin: 0 auto;
-      background: #29221f;
+      background: var(--bg-dark);
+      border-collapse: collapse;
+      border: none;
+    }
+    .advice-text {
       font-weight: 300;
       text-align: left;
       padding: 25px 65px;
       font-size: 20px;
     }
 
-    /* Footer */
-    .footer {
-      background-color: #29221f;
+    /* Footer band */
+    .row-footer { background: var(--bg-dark); }
+    .footer-title {
+      color: #fff;
+      font-weight: 800;
       text-align: center;
       padding: 20px;
-    }
-
-    .footer h1 {
-      font-size: 16px;
-      font-weight: 600;
-      color: #fff;
+      font-size: 18px;
       margin: 0;
     }
 
-    /* Media responsiveness */
-    @media screen and (max-width: 768px) {
-      .main-table,
-      .main-table tbody,
-      .main-table tr,
-      .main-table td {
-        display: block;
-        width: 100% !important;
-        height: auto;
-      }
-      .split-left,
-      .split-right {
-        width: 100%;
-        padding: 20px;
-      }
+    /* Mobile */
+    @media (max-width: 768px) {
+      .split-left, .split-right { display: block; width: 100%; }
+      .pad-wide { padding: 24px; }
+      .intro-text { padding: 20px; font-size: 22px; }
+      .advice-text { padding: 20px; font-size: 18px; }
     }
   </style>
 </head>
-
 <body>
-  <table class="main-table">
+  <table class="main-table" role="presentation">
     <!-- Header -->
-    <tr>
-      <td colspan="2">
-        <div class="header-nested">
-          <h1>Biketec - Specialists in bikes for schools</h1>
-        </div>
-      </td>
-    </tr>
-
-    <!-- Intro -->
-    <tr>
-      <td colspan="2">
+    <tr class="row-header">
+      <td colspan="2" style="bor
