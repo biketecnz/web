@@ -1,27 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Biketec - Specialists in bikes for schools</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
+      padding: 0;
       background: #000;
       color: #fff;
-      font-family: "Poppins", sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
 
-    table {
+    .main-table {
       width: 100%;
+      max-width: 1900px;
+      margin: 0 auto;
       border-collapse: collapse;
     }
-    td {
+
+    .main-table td {
       vertical-align: top;
-      padding: 0;
+      border: none;
+      padding: 20px;
     }
 
     /* Header */
@@ -30,55 +30,99 @@
       text-align: center;
       padding: 20px;
     }
-    .header h1 {
-      margin: 0;
-      font-size: 22px;
-      font-weight: 700;
-      color: #fff;
-    }
+    .header h1 { margin: 0; font-size: 20px; font-weight: 700; }
 
-    /* Intro */
-    .intro {
+    /* Hero */
+    .hero {
       background: #29221f;
       text-align: center;
-      padding: 40px 20px;
-      font-size: 28px;
+      padding: 50px 20px;
+      font-size: 26px;
       font-weight: 300;
-      line-height: 1.5;
     }
 
-    /* Split row layout */
-    .split td {
-      width: 50%;
-      position: relative;
+    /* Split section */
+    .split {
+      display: flex;
+      flex-wrap: wrap;
     }
-    .split .text {
-      padding: 40px 60px;
-      font-size: 18px;
-      font-weight: 200;
-      line-height: 1.6;
-      color: #fff;
+    .split .left, .split .right {
+      flex: 1;
+      min-width: 300px;
+      padding: 40px;
     }
     .split img {
       width: 100%;
-      height: 100%;
-      object-fit: cover; /* fills cell, crops overflow */
+      height: auto;
       display: block;
     }
 
-    /* Subscription */
-    .subscription h3 {
-      margin-top: 0;
-      font-size: 20px;
-      font-weight: 600;
-      color: #fff;
+    /* Subscription list */
+    .subscription h3 { font-size: 22px; margin-top: 0; }
+    .subscription ul { padding-left: 20px; }
+    .subscription li { margin-bottom: 10px; }
+
+    /* Footer */
+    .footer {
+      background: #29221f;
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+      font-weight: 400;
     }
-    .subscription ul {
-      margin: 15px 0 20px 20px;
-      padding: 0;
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .split { flex-direction: column; }
     }
-    .subscription li {
-      margin-bottom: 10px;
-      font-weight: 200;
-      font-size: 18px;
-      line-he
+  </style>
+</head>
+<body>
+
+  <table class="main-table">
+    <tr><td colspan="2" class="header">
+      <h1>Biketec - Specialists in bikes for schools</h1>
+    </td></tr>
+
+    <tr><td colspan="2" class="hero">
+      We know how tough kids can be on bikes.<br>
+      Our goal is to keep your school's fleet in top condition.<br>
+      Join our School Bike Fleet Service Programme today!
+    </td></tr>
+
+    <tr>
+      <td class="split left">
+        <img src="https://biketecnz.github.io/web/Biketec_Website_Cover_Image1.jpg" alt="Cover Image 1">
+      </td>
+      <td class="split right">
+        Our mission is to provide a service that addresses exactly what a school needs to keep their full bike fleet ready and safe for their students...
+      </td>
+    </tr>
+
+    <tr>
+      <td class="split left subscription">
+        <h3>An annual subscription includes:</h3>
+        <ul>
+          <li>We come to you, no need to haul bikes to a store</li>
+          <li>We inspect, service, and tune every bike four times per year</li>
+          <li>We apply special measures to reduce common breakages</li>
+          <li>No extra charges for parts</li>
+          <li>We drop by free to repair out-of-action bikes</li>
+        </ul>
+        <h3>Cost</h3>
+        <p><b>Child-sized bikes: $78 per bike/year</b><br>
+        <b>Adult-sized bikes: $112 per bike/year</b><br>
+        (Min 20 bikes, excl. GST)</p>
+      </td>
+      <td class="split right">
+        <img src="https://biketecnz.github.io/web/Biketec_Website_Cover_Image2.jpg" alt="Cover Image 2">
+      </td>
+    </tr>
+
+    <tr><td colspan="2" class="footer">
+      ~ ~ www.biketec.org.nz ~ ~ Simon Gilbert ~ ~ 021 746642 ~ ~ simon@biketec.org.nz ~ ~
+    </td></tr>
+  </table>
+
+</body>
+</html>
