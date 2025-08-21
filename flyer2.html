@@ -1,23 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <base href="https://www.biketec.org.nz" />
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Biketec - Specialists in bikes for schools</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-
   <style>
-    /* Base */
-    :root {
-      --bg-dark: #29221fff;   /* original 8-digit hex with alpha */
-      --bg-brown: #312824ff;
-      --bg-green: #203715ff;
-    }
-    * { box-sizing: border-box; }
     body {
       margin: 0;
       background: #000;
@@ -25,141 +15,157 @@
       font-family: "Poppins", sans-serif;
     }
 
-    /* Table scaffold (kept on purpose to preserve original layout) */
-    .main-table {
+    table {
       width: 100%;
-      max-width: 1900px;
       border-collapse: collapse;
-      table-layout: fixed;
-      margin: 0 auto;
     }
-    .main-table td {
+    td {
       vertical-align: top;
-      position: relative;
-      border: 1px solid #333; /* matches the original subtle grid */
     }
 
-    /* Header band */
-    .row-header { background: var(--bg-dark); }
-    .header-nested {
-      width: 100%;
-      background: var(--bg-dark);
-      border-collapse: collapse;
-      border: none;
-    }
-    .header-title {
-      color: #fff;
-      font-weight: 800;
+    /* Header */
+    .header {
+      background: #29221f;
       text-align: center;
-      padding: 20px 30px 0 20px;
-      font-size: 18px;
+      padding: 20px;
+    }
+    .header h1 {
       margin: 0;
+      font-size: 22px;
+      font-weight: 700;
     }
 
-    /* Intro band */
-    .row-intro { background: var(--bg-dark); }
-    .intro-box {
-      width: 1200px;
-      margin: 0 auto;
-      background: var(--bg-dark);
-      border-collapse: collapse;
-      border: none;
-    }
-    .intro-text {
-      font-weight: 300;
+    /* Intro */
+    .intro {
+      background: #29221f;
       text-align: center;
-      padding: 25px 65px;
-      font-size: 28px;
+      padding: 40px 20px;
+      font-size: 24px;
+      font-weight: 300;
     }
 
-    /* Split rows */
-    .row-mission { background: var(--bg-brown); }
-    .row-subscription { background: var(--bg-green); }
-
-    .split-left, .split-right {
+    /* Split row */
+    .split td {
       width: 50%;
+      padding: 40px;
     }
-    .pad-wide {
-      color: #fff;
-      font-weight: 200;
-      text-align: left;
-      padding: 200px 40px 200px 80px; /* matches original generous spacing */
-      font-size: 18px;
-    }
-
-    /* Images should take the cell width and keep aspect ratio */
-    td.image-cell { padding: 0; }
-    td.image-cell img {
-      display: block;
+    .split img {
       width: 100%;
       height: auto;
+      display: block;
     }
 
-    /* Subscription content */
+    /* Subscription */
     .subscription h3 {
+      margin-top: 0;
       font-size: 20px;
       font-weight: 600;
-      margin: 30px 0 15px;
-      color: #fff;
     }
     .subscription ul {
-      list-style: disc;
-      margin: 0 0 20px 25px;
+      margin: 0 0 20px 20px;
       padding: 0;
     }
     .subscription li {
       margin-bottom: 10px;
-      line-height: 1.5;
-      color: #fff;
-      font-size: 18px;
       font-weight: 200;
+      font-size: 18px;
     }
     .subscription p {
-      line-height: 1.6;
-      margin-top: 20px;
-      color: #fff;
       font-size: 18px;
       font-weight: 200;
     }
 
-    /* Advice band */
-    .row-advice { background: var(--bg-dark); }
-    .advice-box {
-      width: 900px;
-      margin: 0 auto;
-      background: var(--bg-dark);
-      border-collapse: collapse;
-      border: none;
-    }
-    .advice-text {
-      font-weight: 300;
-      text-align: left;
-      padding: 25px 65px;
+    /* Advice */
+    .advice {
+      background: #29221f;
+      padding: 30px 40px;
       font-size: 20px;
+      font-weight: 300;
+      text-align: center;
     }
 
-    /* Footer band */
-    .row-footer { background: var(--bg-dark); }
-    .footer-title {
-      color: #fff;
-      font-weight: 800;
+    /* Footer */
+    .footer {
+      background: #29221f;
       text-align: center;
       padding: 20px;
-      font-size: 18px;
-      margin: 0;
-    }
-
-    /* Mobile */
-    @media (max-width: 768px) {
-      .split-left, .split-right { display: block; width: 100%; }
-      .pad-wide { padding: 24px; }
-      .intro-text { padding: 20px; font-size: 22px; }
-      .advice-text { padding: 20px; font-size: 18px; }
+      font-weight: 600;
+      font-size: 16px;
     }
   </style>
 </head>
 <body>
-  <table class="main-table" role="presentation">
+  <table>
     <!-- Header -->
-    <tr class="row-header">
-      <td colspan="2" style="bor
+    <tr>
+      <td colspan="2" class="header">
+        <h1>Biketec - Specialists in bikes for schools</h1>
+      </td>
+    </tr>
+
+    <!-- Intro -->
+    <tr>
+      <td colspan="2" class="intro">
+        We know how tough kids can be on bikes.<br>
+        Our goal is to keep your school's fleet in top condition.<br>
+        Join our School Bike Fleet Service Programme today!
+      </td>
+    </tr>
+
+    <!-- Mission -->
+    <tr class="split" style="background:#312824;">
+      <td>
+        <img src="https://biketecnz.github.io/web/Biketec_Website_Cover_Image1.jpg" alt="Cover Image 1">
+      </td>
+      <td>
+        Our mission is to provide a service that addresses exactly what a school needs to keep their full bike fleet ready and safe for their students to benefit from while limiting costs.<br><br>
+        We see the results of how bikes are treated in schools every day. Over the past fourteen years we’ve seen it all, kids are tough on bikes. To keep your investment in equipment for your students in a safe, serviceable condition they need regular care. Bikes in a school environment that are not regularly maintained have a short lifespan, but with some care they can last well over ten years.<br><br>
+        You could take the time to pile your bikes on a trailer and haul them down to a bike store and pay $80-$150 for each bike to get checked over and tightened up, plus more for replacement parts. Or you could join our School Bike Fleet Service Programme and know that your bikes will be ready to use year round.
+      </td>
+    </tr>
+
+    <!-- Subscription -->
+    <tr class="split" style="background:#203715;">
+      <td>
+        <div class="subscription">
+          <h3>An annual subscription includes:</h3>
+          <ul>
+            <li>We come to you, so you don’t have to transport bikes</li>
+            <li>We fully service every bike four times per year</li>
+            <li>We apply measures that reduce common breakages</li>
+            <li>No extra charge for most parts</li>
+            <li>Free call-outs between services for breakdowns</li>
+            <li>Activities for bike monitors to learn maintenance</li>
+            <li>Check bike storage/security and advise improvements</li>
+            <li>Share experience from other schools</li>
+          </ul>
+          <h3>Costs</h3>
+          <p>
+            <b>Child sized bikes:</b> $78 per bike per year (min 20)<br>
+            <b>Adult sized bikes:</b> $112 per bike per year (min 20)<br>
+            Scooters and balance bikes included free.<br>
+            Prices exclude GST.
+          </p>
+        </div>
+      </td>
+      <td>
+        <img src="https://biketecnz.github.io/web/Biketec_Website_Cover_Image2.jpg" alt="Cover Image 2">
+      </td>
+    </tr>
+
+    <!-- Advice -->
+    <tr>
+      <td colspan="2" class="advice">
+        We also give advice on purchasing new bikes and equipment most appropriate for your environment and needs, and can supply a range of top-quality brands. All bikes we sell come with a one year subscription to this service included.
+      </td>
+    </tr>
+
+    <!-- Footer -->
+    <tr>
+      <td colspan="2" class="footer">
+        ~ ~ www.biketec.org.nz ~ ~ Simon Gilbert ~ ~ 021 746642 ~ ~ simon@biketec.org.nz ~ ~
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
