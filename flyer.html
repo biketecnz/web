@@ -7,7 +7,7 @@
     rel="stylesheet">
 
   
-  <style>
+<style>
     /* Base styles */
     body {
   margin: 0;
@@ -112,8 +112,8 @@
     color: #ffffff;
     font-weight: 200;
     text-align: left;
-    padding: 160px 40px 200px 80px;
-    font-size: 24px;
+    padding: 200px 40px 200px 80px;
+    font-size: 18px;
     }
     /* split - Service programme | image */
     .main-table tr:nth-child(4) {
@@ -140,7 +140,7 @@
     }
 
     .curriculum-content h3 {
-    font-size: 28px;
+    font-size: 20px;
     font-weight: 600;
     margin-top: 30px;
     margin-bottom: 15px;
@@ -157,7 +157,7 @@
     margin-bottom: 10px;
     line-height: 1.5;
     color: #ffffff;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 200;
     }
 
@@ -165,18 +165,35 @@
     line-height: 1.6;
     margin-top: 20px;
     color: #ffffff;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 200;
     }
     .main-table tr:nth-child(5) td {
       color: white;
-      font-weight: 600;
+      font-weight: 200;
       text-align: center;
-      padding: 100px 10px 100px 10px;
+      padding: 100px 40px 100px 40px;
       font-size: 26px;
     }
 
-   
+    /* Testimonial overlay styling */
+    .testimonial-overlay {
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      text-align: centre;
+      padding: 40px;
+      color: white;
+      font-size: 24px;
+      font-weight: 400;
+      max-width: 80%;
+      line-height: 1.4;
+      background: rgba(0, 0, 0, 0);
+      border-radius: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
 
     @media screen and (max-width: 1800px) {
       .testimonial-overlay {}
@@ -185,10 +202,11 @@
     /* Split - image | Developing a passion */
     .main-table tr:nth-child(5) {
       height: 150px !important;
+      background-color: #203715ff;
     }
 
     .main-table tr:nth-child(6) td {
-      color:
+      color: #ffffff;
       font-weight: 200;
       text-align: left;
       padding: 200px 40px 200px 80px;
@@ -224,10 +242,10 @@
     }
 
     .nested-cell td {
-      font-weight: 200;
+      font-weight: 600;
       text-align: left;
       padding: 25px;
-      font-size: 24px;
+      font-size: 20px;
       background: #27211eff;
       border: none;
     }
