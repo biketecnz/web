@@ -176,6 +176,16 @@
     padding: 0;
   }
 
+/* Header logo only */
+.header-nested img {
+  position: static;      /* undo absolute positioning */
+  height: 160px;         /* controls logo height */
+  width: auto;           /* keep aspect ratio */
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+  
   /* ========== Mobile ========== */
   @media screen and (max-width: 768px) {
     .main-table,
